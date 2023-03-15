@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface TicketRepository {
 
-    Ticket save(Ticket ticket);
+    Optional<Ticket> save(Ticket ticket);
 
     boolean deleteById(int id);
 

@@ -14,7 +14,7 @@ public class Ticket {
             "id", "id",
             "session_id", "sessionId",
             "row_number", "rowNumber",
-            "place_Number", "placeNumber",
+            "place_number", "placeNumber",
             "user_id", "userId"
     );
 

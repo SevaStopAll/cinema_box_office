@@ -1,10 +1,9 @@
-package ru.job4j.cinema.repository;
+package ru.job4j.cinema.service;
 
 import ru.job4j.cinema.model.Film;
 
 import java.util.Collection;
 
-public interface FilmRepository {
+public interface FilmService {
     Collection<Film> findAll();
-
 }

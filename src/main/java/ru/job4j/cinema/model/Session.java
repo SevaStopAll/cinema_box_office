@@ -9,7 +9,7 @@ public class Session {
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
             "id", "id",
             "film_id", "filmId",
-            "halls_id", "hallId",
+            "hall_id", "hallId",
             "start_time", "startTime",
             "end_time", "endTime",
             "price", "price"
