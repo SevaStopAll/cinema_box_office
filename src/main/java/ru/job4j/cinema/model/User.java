@@ -1,17 +1,25 @@
 package ru.job4j.cinema.model;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class User {
     private int id;
     private String email;
-    private String name;
+    private String fullName;
     private String password;
 
-    public User(int id, String email, String name, String password) {
+    public static final Map<String, String> COLUMN_MAPPING = Map.of(
+            "id", "id",
+            "email", "email",
+            "full_name", "fullName",
+            "password", "password"
+    );
+
+    public User(int id, String email, String fullName, String password) {
         this.id = id;
         this.email = email;
-        this.name = name;
+        this.fullName = fullName;
         this.password = password;
     }
 
@@ -33,12 +41,12 @@ public class User {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPassword() {

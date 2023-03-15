@@ -1,4 +1,4 @@
-package ru.job4j.cinema.controller;
+package ru.job4j.cinema.filter.controller;
 
 import net.jcip.annotations.ThreadSafe;
 import org.springframework.stereotype.Controller;

@@ -29,7 +29,7 @@ public class Sql2oUserRepository implements UserRepository {
                     """;
             var query = connection.createQuery(sql, true)
                     .addParameter("email", user.getEmail())
-                    .addParameter("name", user.getName())
+                    .addParameter("name", user.getFullName())
                     .addParameter("password", user.getPassword());
             int generatedId = query.executeUpdate().getKey(Integer.class);
             user.setId(generatedId);
