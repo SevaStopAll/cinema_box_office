@@ -9,7 +9,7 @@ import ru.job4j.cinema.service.FilmService;
 import ru.job4j.cinema.service.SessionService;
 
 @Controller
-@RequestMapping("/sessions") /* Работать с кандидатами будем по URI /sessions/** */
+@RequestMapping("/sessions")
 public class SessionController {
 
     private final SessionService sessionService;

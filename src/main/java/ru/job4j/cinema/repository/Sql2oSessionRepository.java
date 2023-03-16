@@ -2,7 +2,6 @@ package ru.job4j.cinema.repository;
 
 import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
-import ru.job4j.cinema.model.Film;
 import ru.job4j.cinema.model.Session;
 
 import java.util.Collection;
