@@ -19,8 +19,8 @@
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav me-auto">
                     <a class="nav-item nav-link active" href="/">Главная</a>
-                    <a class="nav-item nav-link" th:href="@{/vacancies}">Расписание</a>
-                    <a class="nav-item nav-link" th:href="@{/candidates}">Кинотека</a>
+                    <a class="nav-item nav-link" th:href="@{/sessions}">Расписание</a>
+                    <a class="nav-item nav-link" th:href="@{/films}">Кинотека</a>
                 </div>
                 <div class="d-flex" th:if="${user.name == 'Гость'}">
                     <a class="nav-link text-secondary me-3" th:href="@{/users/register}">Регистрация</a>
@@ -32,13 +32,13 @@
                 </div>
             </div>
         </div>
-</div>
 </nav>
+</div>
 <div class="container mt-2">
-    <h3>Проект job4j_dreamjob, выполняемый в рамках проекта Job4j</h3>
+    <h3>Проект job4j_cinema, выполняемый в рамках проекта Job4j</h3>
     <ul>
-        <li><a th:href="@{/vacancies}">Расписание</a></li>
-        <li><a th:href="@{/candidates}">Кинотека</a></li>
+        <li><a th:href="@{/sessions}">Расписание</a></li>
+        <li><a th:href="@{/films}">Кинотека</a></li>
     </ul>
 </div>
 </div>

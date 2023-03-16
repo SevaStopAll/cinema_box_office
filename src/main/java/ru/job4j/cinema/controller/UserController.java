@@ -49,11 +49,11 @@ public class UserController {
         var userOptional = userService.findByEmailAndPassword(user.getEmail(), user.getPassword());
         if (userOptional.isEmpty()) {
             model.addAttribute("error", "Почта или пароль введены неверно");
-            return "users/login";
+            return "errors:/404";
         }
         var session = request.getSession();
         session.setAttribute("user", userOptional.get());
-        return "redirect:/vacancies";
+        return "redirect:/sessions/list";
     }
 
     @GetMapping("/logout")
