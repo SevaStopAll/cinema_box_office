@@ -7,6 +7,8 @@ import java.util.Optional;
 
 public interface TicketService {
 
+    Optional<Ticket> findBySessionIdAndRowNumberAndPlaceNumber(int sessionId, int rowNumber, int placeNumber);
+
     Optional<Ticket> save(Ticket ticket);
 
     boolean deleteById(int id);
@@ -15,5 +17,6 @@ public interface TicketService {
 
     Optional<Ticket> findById(int id);
 
-    public Collection<Ticket> findAll();
+    Collection<Ticket> findAll();
 }
+

@@ -6,5 +6,11 @@ import java.util.Collection;
 import java.util.Optional;
 
 public interface SessionRepository {
+    Session save(Session session);
+
     Collection<Session> findAll();
+
+    Optional<Session> findById(int id);
+
+    boolean deleteById(int id);
 }

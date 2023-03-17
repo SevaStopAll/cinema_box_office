@@ -32,27 +32,31 @@
                 </div>
             </div>
         </div>
-</nav>
+    </nav>
 </div>
 <div class="container">
     <div class="row">
         <table class="table">
             <thead>
             <tr>
-                <th><i class="bi bi-square"></i></th>
-                <th scope="col">#</th>
-                <th scope="col">Фильм</th>
-                <th scope="col">Зал</th>
-                <th scope="col">Цена билета</th>
+                <th scope="col">Номер сеанса</th>
+                <th scope="col">Название фильма</th>
+                <th scope="col">Номер зала</th>
+                <th scope="col">Начало сеанса</th>
+                <th scope="col">Конец сеанса</th>
             </tr>
             </thead>
             <tbody>
-            <!--<tr th:each="session: ${sessions}">
-                <td th:text="${session.id}"/>
-                <td th:text="${session.hallId}"/>
-                <td><a th:text="${session.filmId}" th:href="@{/sessions/{sessionId}(sessionId=${session.id})}"></a></td>
-                <td th:text="${session.price}"/>
-            </tr>-->
+            <tr th:each="DtoSession: ${DtoSessions}">
+                </td>
+                <td><a th:text="${DtoSession.id}"
+                       th:href="@{/sessions/{DtoSessionId}(DtoSessionId=${DtoSession.id})}"></a>
+                </td>
+                <td th:text="${DtoSession.filmName}"/>
+                <td th:text="${DtoSession.hallsName}"/>
+                <td th:text="${DtoSession.startTime}"/>
+                <td th:text="${DtoSession.endTime}"/>
+            </tr>
             </tbody>
         </table>
     </div>

@@ -31,7 +31,9 @@ public class Session {
         this.price = price;
     }
 
-    public Session() {}
+    public Session() {
+
+    }
 
     public int getId() {
         return id;
@@ -83,8 +85,12 @@ public class Session {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Session session = (Session) o;
         return id == session.id;
     }

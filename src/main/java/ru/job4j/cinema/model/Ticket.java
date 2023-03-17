@@ -26,7 +26,9 @@ public class Ticket {
         this.userId = userId;
     }
 
-    public Ticket() {}
+    public Ticket() {
+
+    }
 
     public int getId() {
         return id;
@@ -70,8 +72,12 @@ public class Ticket {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Ticket ticket = (Ticket) o;
         return id == ticket.id;
     }

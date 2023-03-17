@@ -9,7 +9,7 @@ public class Film {
             "id", "id",
             "name", "name",
             "description", "description",
-            "year", "year",
+            "\"year\"", "year",
             "genre_id", "genreId",
             "minimal_age", "minimalAge",
             "duration_in_minutes", "durationInMinutes",
@@ -36,7 +36,10 @@ public class Film {
         this.fileId = fileId;
     }
 
-    public Film() {}
+    public Film() {
+
+    }
+
 
     public int getId() {
         return id;
@@ -104,8 +107,12 @@ public class Film {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Film film = (Film) o;
         return id == film.id;
     }

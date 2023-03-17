@@ -9,12 +9,12 @@ public interface TicketRepository {
 
     Optional<Ticket> save(Ticket ticket);
 
-    boolean deleteById(int id);
-
-    boolean update(Ticket ticket);
-
-    Optional<Ticket> findById(int id);
+    Optional<Ticket> findBySessionIdAndRowNumberAndPlaceNumber(int sessionId, int rowNumber, int placeNumber);
 
     Collection<Ticket> findAll();
+
+    boolean deleteById(int id);
+
+    Optional<Ticket> findById(int id);
 
 }
