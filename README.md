@@ -9,7 +9,7 @@
 
 #### Stack:  Spring Boot, PostgreSQL, Thymeleaf, Bootstrap, Liquibase, Sql2o. 
 
-### Launch Project. Laucnh Main.java in job4j_cinema/src/main/java/job4j_cinema
+### Launch Project. Launch Main.java in job4j_cinema/src/main/java/job4j_cinema
 
 ### Interface ![image](https://user-images.githubusercontent.com/115623776/226090295-61b3a074-30f3-4dbb-a859-50db881f1448.png)
 ![image](https://user-images.githubusercontent.com/115623776/226090358-2f5dad38-cdf5-4735-8352-30594b6b7f8f.png)
