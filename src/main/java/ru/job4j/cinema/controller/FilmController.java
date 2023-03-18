@@ -12,7 +12,7 @@ import ru.job4j.cinema.service.GenreService;
 
 @ThreadSafe
 @Controller
-@RequestMapping("/films") /* Работать с кандидатами будем по URI /films/** */
+@RequestMapping("/films")
 public class FilmController {
 
     private final FilmService filmService;
@@ -25,7 +25,7 @@ public class FilmController {
 
     @GetMapping
     public String getAll(Model model) {
-        model.addAttribute("DTOfilms", filmService.findAll());
+        model.addAttribute("Dtofilms", filmService.findAll());
         return "films/list";
     }
 }

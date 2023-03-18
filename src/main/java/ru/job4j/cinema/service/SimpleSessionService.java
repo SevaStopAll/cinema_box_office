@@ -43,7 +43,8 @@ public class SimpleSessionService implements SessionService {
                     filmRepository.findById(list.get(i).getFilmId()).get().getName(),
                     hallRepository.findById(list.get(i).getHallId()).get().getName(),
                     list.get(i).getStartTime(),
-                    list.get(i).getEndTime()
+                    list.get(i).getEndTime(),
+                    list.get(i).getPrice()
             ));
         }
         return listOfSessionDTO;

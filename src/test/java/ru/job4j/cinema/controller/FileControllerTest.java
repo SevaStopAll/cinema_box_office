@@ -25,7 +25,7 @@ public class FileControllerTest {
     public void initServices() {
         fileService = mock(FileService.class);
         fileController = new FileController(fileService);
-        testFile = new MockMultipartFile("testFile.img", new byte[]{1, 2, 3});
+        testFile = new MockMultipartFile("test.jpg", new byte[]{1, 2, 3});
     }
 
     @Test

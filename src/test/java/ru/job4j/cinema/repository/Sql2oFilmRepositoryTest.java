@@ -43,10 +43,10 @@ class Sql2oFilmRepositoryTest {
         sql2oFileRepository = new Sql2oFileRepository(sql2o);
         sql2oGenreRepository = new Sql2oGenreRepository(sql2o);
 
-        file = new File("test", "test");
+        file = new File("test.jpg", "/test.jpg");
         sql2oFileRepository.save(file);
 
-        genre = new Genre(1, "Триллер");
+        genre = new Genre(6, "Thriller");
         sql2oGenreRepository.save(genre);
 
     }
@@ -67,7 +67,7 @@ class Sql2oFilmRepositoryTest {
 
     @Test
     public void whenSaveThenGetSame() {
-        var film = sql2oFilmRepository.save(new Film(1, "test", "test", 1, genre.getId(), 1, 1, file.getId()));
+        var film = sql2oFilmRepository.save(new Film(1, "film", "a film", 1, genre.getId(), 6, 60, file.getId()));
         var savedFilm = sql2oFilmRepository.findById(film.getId()).get();
         assertThat(savedFilm).usingRecursiveComparison().isEqualTo(film);
     }

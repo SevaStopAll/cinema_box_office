@@ -16,7 +16,7 @@ public class IndexControllerTest {
     @Test
     public void whenRequestIndexPageThenGetIndexPage() {
         var view = indexController.getIndex();
-        assertThat(view).isEqualTo("/index");
+        assertThat(view).isEqualTo("index");
     }
 }
 

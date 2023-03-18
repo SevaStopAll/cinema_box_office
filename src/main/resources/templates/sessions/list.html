@@ -44,6 +44,7 @@
                 <th scope="col">Номер зала</th>
                 <th scope="col">Начало сеанса</th>
                 <th scope="col">Конец сеанса</th>
+                <th scope="col">Цена билета</th>
             </tr>
             </thead>
             <tbody>
@@ -56,6 +57,7 @@
                 <td th:text="${DtoSession.hallsName}"/>
                 <td th:text="${DtoSession.startTime}"/>
                 <td th:text="${DtoSession.endTime}"/>
+                <td th:text="${DtoSession.price}"/>
             </tr>
             </tbody>
         </table>

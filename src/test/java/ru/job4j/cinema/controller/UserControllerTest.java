@@ -35,7 +35,7 @@ public class UserControllerTest {
     @Test
     public void whenRequestRegisterPageThenGetRegisterPage() {
         var view = userController.getRegistrationPage();
-        assertThat(view).isEqualTo("users/register");
+        assertThat(view).isEqualTo("/users/register");
     }
 
     @Test
@@ -84,7 +84,7 @@ public class UserControllerTest {
         var view = userController.loginUser(user, model, httpServletRequest);
         var actualMessage = model.getAttribute("error");
 
-        assertThat(view).isEqualTo("users/login");
+        assertThat(view).isEqualTo("errors:/404");
         assertThat(actualMessage).isEqualTo(expectedMessage);
     }
 

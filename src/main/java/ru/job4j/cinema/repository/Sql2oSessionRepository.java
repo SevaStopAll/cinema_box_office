@@ -50,14 +50,15 @@ public class Sql2oSessionRepository implements SessionRepository {
     public Session save(Session session) {
         try (var connection = sql2o.open()) {
             var sql = """
-                    INSERT INTO film_sessions (film_id, halls_id, start_time, end_time)
-                    VALUES (:filmId, :hallsId, :startTime, :endTime)
+                    INSERT INTO film_sessions (film_id, hall_id, start_time, end_time, price)
+                    VALUES (:filmId, :hallId, :startTime, :endTime, :price)
                     """;
             var query = connection.createQuery(sql, true)
                     .addParameter("filmId", session.getFilmId())
                     .addParameter("hallId", session.getHallId())
                     .addParameter("startTime", session.getStartTime())
-                    .addParameter("endTime", session.getEndTime());
+                    .addParameter("endTime", session.getEndTime())
+                    .addParameter("price", session.getPrice());
             int generatedId = query.executeUpdate().getKey(Integer.class);
             session.setId(generatedId);
             return session;

@@ -39,8 +39,8 @@ public class SessionControllerTest {
 
     @Test
     public void whenRequestFilmSessionListPageThenGetPageWithFilmSessions() {
-        var filmSession1DTO = new SessionDto(1, "Фильм1", "Зал1", LocalDateTime.now(), LocalDateTime.now());
-        var filmSession2DTO = new SessionDto(1, "Фильм2", "Зал2", LocalDateTime.now(), LocalDateTime.now());
+        var filmSession1DTO = new SessionDto(1, "Film1", "Big hall", LocalDateTime.now(), LocalDateTime.now(), 300);
+        var filmSession2DTO = new SessionDto(1, "Film2", "Little hall", LocalDateTime.now(), LocalDateTime.now(), 300);
         var expectedFilmSessionsDTO = List.of(filmSession1DTO, filmSession2DTO);
         when(filmSessionService.findAll()).thenReturn(expectedFilmSessionsDTO);
 
@@ -55,7 +55,7 @@ public class SessionControllerTest {
     @Test
     public void whenRequestBuyTicketPageThenGetPageRowsAndPlacesToBuyTicket() {
         var optionalFilmSession = Optional.of(new Session(1, 1, 1, LocalDateTime.now(), LocalDateTime.now(), 300));
-        var optionalFilm = Optional.of(new Film(1, "foo", "bar", 1, 1, 1, 1, 1));
+        var optionalFilm = Optional.of(new Film(1, "film", "a film", 2023, 1, 6, 45, 1));
         var expectedRowList = List.of(1, 2, 3);
         var expectedPlaceList = List.of(1, 2, 3, 4, 5);
         when(filmSessionService.findById(anyInt())).thenReturn(optionalFilmSession);

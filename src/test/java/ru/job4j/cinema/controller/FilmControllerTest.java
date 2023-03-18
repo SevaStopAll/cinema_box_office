@@ -30,14 +30,14 @@ public class FilmControllerTest {
 
     @Test
     public void whenRequestFilmListPageThenGetPageWithFilmsDTO() {
-        var film1Dto = new FilmDto(1, "name1", "desc1", 1987, "genre1", 13, 90, 1);
-        var film2Dto = new FilmDto(2, "name2", "desc2", 1987, "genre1", 18, 120, 1);
+        var film1Dto = new FilmDto(1, "film", "film number 1", 2023, "genre1", 13, 60, 1);
+        var film2Dto = new FilmDto(2, "film1", "film number 2", 2023, "genre1", 18, 45, 1);
         var expectedFilmsDto = List.of(film1Dto, film2Dto);
         when(filmService.findAll()).thenReturn(expectedFilmsDto);
 
         var model = new ConcurrentModel();
         var view = filmController.getAll(model);
-        var actualFilmsDto = model.getAttribute("DTOfilms");
+        var actualFilmsDto = model.getAttribute("Dtofilms");
 
         assertThat(view).isEqualTo("films/list");
         assertThat(actualFilmsDto).isEqualTo(expectedFilmsDto);
