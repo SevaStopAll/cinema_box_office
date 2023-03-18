@@ -41,8 +41,7 @@ public class Sql2oTicketRepository implements TicketRepository {
             optionalTicket = Optional.of(ticket);
         } catch (Exception e) {
             LOG.info("Билет на это место на этот киносеанс уже кем-то приобретен");
-            e.printStackTrace();
-            LOG.error(e.getLocalizedMessage());
+            LOG.error(e.getLocalizedMessage(), e);
         }
         return optionalTicket;
     }
