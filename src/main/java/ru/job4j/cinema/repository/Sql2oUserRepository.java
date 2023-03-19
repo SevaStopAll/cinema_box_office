@@ -38,7 +38,6 @@ public class Sql2oUserRepository implements UserRepository {
             user.setId(generatedId);
             optionalUser = Optional.of(user);
         } catch (Exception e) {
-            LOG.info("Пользователь с таким почтовым адресом уже существует");
             LOG.error(e.getLocalizedMessage(), e);
         }
         return optionalUser;
